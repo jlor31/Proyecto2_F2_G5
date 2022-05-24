@@ -3,6 +3,12 @@
   <groupId>com.proyecto2</groupId>
   <artifactId>Proyecto2v2</artifactId>
   <version>0.0.1-SNAPSHOT</version>
+  
+  <properties>
+    <maven.compiler.source>1.8</maven.compiler.source>
+    <maven.compiler.target>1.8</maven.compiler.target>
+  </properties>
+  
   <name>GoodBooks_P2</name>
   
   <dependencies>
