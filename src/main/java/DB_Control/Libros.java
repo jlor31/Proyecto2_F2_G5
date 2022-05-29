@@ -23,18 +23,28 @@ public class Libros implements AutoCloseable {
 	
 	
 	
-
+	/**
+	 * @param uri
+	 * @param user
+	 * @param password
+	 */
     public Libros( String uri, String user, String password )
     {
         driver = GraphDatabase.driver( uri, AuthTokens.basic( user, password ) );
     }
 	
-	
+	/**
+	 * Metodo Close
+	 */
     public void close() throws Exception
     {
         driver.close();
     }
 
+	/**
+	 * Metodo Query
+	 * @param query
+	 */
     public void query( String query )
     {
         try ( Session session = driver.session() )
@@ -95,6 +105,9 @@ public class Libros implements AutoCloseable {
     }
 
     
+	/**
+	 * @return Recs
+	 */
     public static ArrayList<ArrayList<String>> getRecs(){
     	
     	System.out.println("TEST");

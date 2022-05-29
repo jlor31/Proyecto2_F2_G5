@@ -32,11 +32,10 @@ public class Generador implements ActionListener {
 	private static JPanel panel = new JPanel();
 	private static JFrame frame = new JFrame();
 	
+	 
 	private static ArrayList<ArrayList<String>> recomendaciones = new ArrayList<ArrayList<String>>();
 	
 	public static void prompt(){
-		
-		
 		
 		frame.setSize(1000,400);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -86,6 +85,7 @@ public class Generador implements ActionListener {
 		
 	}
 	
+
 	
 	public void actionPerformed(ActionEvent e) {
 		
@@ -105,7 +105,9 @@ public class Generador implements ActionListener {
 		}
 	}
 	
-	
+	/**
+	 * @throws Exception
+	 */
 	public static void recomendaciones() throws Exception {
 		
 		try ( Libros libros = new Libros( "neo4j+s://e8cabdf1.databases.neo4j.io", "neo4j", "iZwumGTsvgEW3Cp4XQdhvpVs24KzeW8FSJ4M0lnLDLw" ) )
